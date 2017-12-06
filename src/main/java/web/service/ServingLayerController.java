@@ -11,7 +11,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 import web.scraping.jsoup.Indicator;
-import web.scraping.jsoup.TestJsoupCanadaPatents;
+import web.scraping.jsoup.TestJsoupIndicators;
 
 @RestController
 public class ServingLayerController {
@@ -20,7 +20,7 @@ public class ServingLayerController {
 	public List<Indicator> serve(
 			@RequestParam(value = "user", required = true, defaultValue = "null") String user)
 			throws JsonParseException, JsonMappingException, IOException {
-		return TestJsoupCanadaPatents.getIndicators(user);
+		return TestJsoupIndicators.getIndicators(user);
 	}
 	
 }
