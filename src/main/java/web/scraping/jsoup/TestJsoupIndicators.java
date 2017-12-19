@@ -16,7 +16,7 @@ public class TestJsoupIndicators {
 		/* Obtengo el investigador de Google Scholar */
 		String BASE_URL = "https://scholar.google.es/citations?user=" + user + "&hl=en";
 		//Document investigador = Jsoup.parse(new URL(BASE_URL), 10000);
-		Document investigador = Jsoup.connect("https://scholar.google.es/citations?user=" + user + "&hl=en").get();
+		Document investigador = Jsoup.connect("http://scholar.google.es/citations?user=" + user + "&hl=en").get();
 		Element tablaIndicadores = investigador.getElementById("gsc_rsb_st");
 		Elements thead = tablaIndicadores.getElementsByTag("thead");
 		Elements tbody = tablaIndicadores.getElementsByTag("tbody");
